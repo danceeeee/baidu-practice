@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h3>污染城市列表</h3>
+		<ul id="aqi-list1">
+		</ul>
+		<br />
+		<ul id="aqi-list2">
+		</ul>
+		<script type="text/javascript">
+			var aqiData = [
+			["武汉",110],
+			["上海",50],
+			["北京",90],
+			["福州",10],
+			["广州",50],
+			["成都",90],
+			["西安",100]
+			];
+			//方法一
+			(function(){
+				var ul = document.getElementById("aqi-list1");
+				var niceCity = [];
+				/*  遍历数组找出符合指数大于60的城市*/
+				for (var i=0,len=aqiData.length;i<len;i++){
+					if (aqiData[i][1]>60){
+						niceCity.push(aqiData[i]);
+					}
+				}
+				/*将筛选出的城市显示在网页中*/
+				for(var j =0,lens=niceCity.length;j<lens;j++){
+					var c = niceCity[j];
+					var li =document.createElement("li");
+					var data = "城市："+c[0]+"\t空气指数："+c[1];
+					var air = document.createTextNode(data);
+					li.appendChild(air)
+					ul.appendChild(li);
+				}
+			})();
+			//方法二
+			(function(){
+				var ul = document.getElementById("aqi-list2");
+				var niceCity = aqiData.filter(function(ele,ind,arr){
+					return ele[1]>60;
+				});
+				niceCity.sort(function(a,b){
+					return a[1]-b[1];
+				})
+				niceCity.forEach(function(ele,ind,arr){
+					var li = document.createElement("li");
+					li.innerHTML = "城市："+arr[ind][0]+"\t 污染指数"+ele[1];
+					ul.appendChild(li);
+				});
+			})();
+		</script>
+	</body>
+</html>
