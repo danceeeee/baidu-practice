@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>HTML CSS任务1 </title>
+		<style type="text/css">
+			body,ul,p,li,img,a {
+			padding:0px;
+			margin:0px;
+			}
+			a {
+				text-decoration: none;
+			}
+			ul {
+			list-style-type:none;
+			}
+			img {
+				max-width: 100%;
+				max-height: 100%;
+			}
+			body {
+				font-size: 17px;
+				line-height: 1.8em;
+				background: #888;
+			
+			}
+			header {
+				background: #333;
+			}
+			header ul {
+				float: right;
+				width: 400px;
+				font-size: 24px;
+				padding: 30px 0px;
+			}
+			header ul li {
+				display: inline-block;
+				margin: 10px;
+			}
+			header ul li a {
+				display: block;
+				float: left;
+				color:#ddd;
+			}
+			header ul li:last-child a{
+				color: #555;
+			}
+			header ul li a:hover {
+				color: #aa4;
+			}
+			.paper {
+				background: #fff;
+				margin: 20px 30px;
+				padding: 30px 20px;
+				
+			}
+			.paper h3,h4 {
+				color: #888888;
+				}
+				.paper p {
+					text-indent: 2em;
+				}
+			.paper ul {
+				padding-left: 20px;
+			}
+			#pic ul li {
+				display: block;
+				border: 1px solid #aaa;
+				padding: 20px;
+				text-align: center;
+				margin: 20px 0px;
+			}
+			.paper table {
+				width: 100%;
+			}
+			.paper table tr:first-child {
+				background: #222;
+				color: #fff;
+			}
+			.paper table tr:last-child {
+				background: #ddd;
+				font-weight: bold;
+			}
+			#inf {
+				padding: 0px auto;
+			}
+			#inf .tip{
+				color: #999;
+			}
+			#inf #submit {
+				display: block;
+				width: 100%;
+				background: #00f;
+				font-size: 17px;
+				line-height: 2em;
+				color: #FFFFFF;
+			}
+			#inf label {
+			}
+			footer {
+				background: #333;
+				text-align: center;
+				padding: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+		<a href="http://www.baidu.com"><img src="img/baidu.png"/></a>
+		<ul>	
+		<li><a href="#">html</a></li>
+		<li><a href="#">css</a></li>
+		<li><a href="#">javascript</a></li>
+		<li><a href="#">实例练习</a></li>
+		</ul>
+		</header>
+		<div class="paper">
+			<h2>HTML</h2>
+			<h3>介绍</h3>
+			<h4>作者：MR jecy</h4>
+			<p>万维网上的一个超媒体文档称之为一个页面（外语：page）。作为一个组织或者个人在万维网上放置开始点的页面称为主页（外语：Homepage）或
+				首页，主页中通常包括有指向其他相关页面或其他节点的指针（超级链接），所谓超级链接，就是一种统一资源定位器（Uniform Resource Locator，外语缩写：URL）指针，通过激活（点击）它，可使浏览器方便地获取新的网页。这也是HTML获得广泛应用的最重要的原因之一。在逻辑上将视为一个整体的一系列页面的有机集合称为网站（Website或Site）。超级文本标记语言（英文缩写：HTML）是为“网页创建和其它可在网页浏览器中看到的信息”设计的一种标记语言。
+网页的本质就是<strong>超级文本标记语言</strong>，<a href="#">扩展知识</a>通过结合使用其他的Web技术（如：脚本语言、公共网关接口、组件等），可以创造出功能强大的网页。因而，超级文本标记语言是万维网（Web）编程的基础，也就是说万维网是建立在超文本基础之上的。超级文本标记语言之所以称为超文本标记语言，是因为文本中包含了所谓“超级链接”点。
+			</p>
+			<br />
+			<img src="img/html.jpg"/>
+			<p>新的内容万维网上的一个超媒体文档称之为一个页面（外语：page）。作为一个组织或者个人在万维网上放置开始点的页面称为主页（外语：Homepage）或
+				首页，主页中通常包括有指向其他相关页面或其他节点的指针（超级链接）
+			</p>
+		</div>
+		<div class="paper">
+			<h2>CSS</h2>
+			<h3>介绍</h3>
+			<h4>作者 MR.jecy</h4>
+			<p>层叠样式表(英文全称：Cascading Style Sheets)是一种用来表现HTML（标准通用标记语言的一个应用）或XML（标准通用标记语言的一个子集）等文件样式的计算机语言（<a href="#">知识扩展</a>）。CSS不仅可以静态地修饰网页，还可以配合各种脚本语言动态地对网页各元素进行格式化。[1] 
+			</p>
+			<br /><img src="img/CSS.jpg"/>
+			<ul>
+				<li>SASS</li>
+				<li>LESS</li>
+				<li>SCSS</li>
+			</ul>
+		</div>
+		<div class="paper" id="pic">
+			<h2>图片</h3>
+			<ul>
+				<li>图片1<br /><img src="img/CSS.jpg"/><br /></li>
+				<li>图片2<br /><img src="img/CSS.jpg"/><br /></li>
+				<li>图片3<br /><img src="img/CSS.jpg"/><br /></li>
+				<li>图片4<br /><img src="img/CSS.jpg"/><br /></li>
+			</ul>
+			</div>
+		<div class="paper">
+			<h2>JAVASCRIPT</h2>
+			<h3>介绍</h3>
+			<h4>作者 MR.JECY</h4>
+			<ol>
+				<li>JQUERY</li>
+				<li>BOOTSRAP</li>
+				<li>AJAX</li>
+			</ol>
+			<div>
+				以下表格显示学习内容的难度和重要性
+				<table border="1" cellspacing="" cellpadding="">
+					<tr><th>内容</th><th>难度</th><th>操作</th></tr>
+					<tr><td>JQUERY</td><td>一</td><td><a href="#">添加</a></td></tr>
+					<tr><td>BOOTSTRAP</td><td>二</td><td><a href="#">添加</a></td></tr>
+					<tr><td>总计</td><td colspan="2">2</td></tr>
+				</table>
+			</div>
+		</div>
+		<div class="paper" id="inf">
+			<h2>实例练习</h2>
+			<form action="post">
+				<label>请输入邮箱地址：<input type="text" name="email" placeholder="邮箱" /></label>
+				<br /><span class="tip">邮箱格式按要求填写</span>
+				<br /><label>请输入密码:<input type="password" name="password" placeholder="密码"/></label>
+				<br />
+				<label >请重复输入密码:<input type="password" name="password" placeholder="重新输入密码" /></label>
+				<br /><span class="tip">密码为6-16位英文数字</span>
+				<br />
+				性别：
+				<label><input type="radio" name="sex" value="man" checked=""/>男</label>
+				<label><input type="radio" name="sex" value="woman"/>女</label>
+				<br />
+				城市:<select name="city">
+					<option value="南京">南京</option>
+					<option value="上海">上海</option>
+					<option value="北京" selected>北京</option>
+				</select>
+				<br />
+				爱好：<label><input type="checkbox" name="hobby" id="hobby" value="运动" />运动</label>
+				<label><input type="checkbox" name="hobby" id="hobby" value="艺术" />艺术</label>
+				<label><input type="checkbox" name="hobby" id="hobby" value="科学" />科学</label>
+				<br />
+				<label >个人描述：<textarea name="des" rows="" cols="" placeholder="请输入个人描述"></textarea></label>
+				<br />
+				<input type="submit" name="submit" id="submit" value="确认提交" />
+				
+			</form>
+		</div>
+		<footer>
+			<span>版权所有&copy;</span>
+		</footer>
+	</body>
+</html>
