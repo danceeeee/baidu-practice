@@ -5,15 +5,108 @@
 		<title></title>
 	</head>
 	<body>
-		<script type="text/javascript">
-			const numbers = [1, 2, 3, 4];
-let sum = 0;
+		 <ul id="source">
+		    <li>北京空气质量：<b>90</b></li>
+		    <li>上海空气质量：<b>70</b></li>
+		    <li>天津空气质量：<b>80</b></li>
+		    <li>广州空气质量：<b>50</b></li>
+		    <li>深圳空气质量：<b>40</b></li>
+		    <li>福州空气质量：<b>32</b></li>
+		    <li>成都空气质量：<b>90</b></li>
+ 		 </ul>
 
-numbers.forEach(number => {
-  sum += number;
-});
+		  <ul id="resort">
+		    <!-- 
+		    <li>第一名：北京空气质量：<b>90</b></li>
+		    <li>第二名：北京空气质量：<b>90</b></li>
+		    <li>第三名：北京空气质量：<b>90</b></li>
+		     -->
+		
+		  </ul>
 
-console.log(sum);
+  	<button id="sort-btn">排序</button>
+
+<script type="text/javascript">
+
+/**
+ * getData方法
+ * 读取id为source的列表，获取其中城市名字及城市对应的空气质量
+ * 返回一个数组，格式见函数中示例
+ */
+function getData() {
+ 	var data =[];
+ 	// 编写获取文档中数据的函数
+ 	var getValue = function(e){
+ 		var city = e.innerHTML.slice(0,2);
+ 		var value = e.childNodes[1].innerHTML;
+ 		data.push([city,value]);
+ 		
+ 	}
+ 	var lis = document.getElementById("source").getElementsByTagName("li");
+ 	//遍历数组，逐一调用函数，这里不能用forEach（）方法，因为这里得到的不是数组，是Nodelist
+ 	for (var i = 0,len=lis.length;i<len;i++){
+ 	
+ 		getValue(lis[i]);
+ 	}	
+ /*
+  coding here
+  */
+
+  /*
+  data = [
+    ["北京", 90],
+    ["北京", 90]
+    ……
+  ]
+  */
+
+  return data;
+
+}
+
+
+/**
+ * sortAqiData
+ * 按空气质量对data进行从小到大的排序
+ * 返回一个排序后的数组
+ */
+function sortAqiData(data) {
+	data.sort(function(a,b){
+	return a[1]-b[1]
+	});
+}
+/**
+ * render
+ * 将排好序的城市及空气质量指数，输出显示到id位resort的列表中
+ * 格式见ul中的注释的部分
+ */
+function render(data) {
+	var sequence = ["一","二","三","四","五","六","七"];
+	var ul =document.getElementById("resort");
+
+	for (var i =0;i<data.length;i++){
+	var area = document.createElement("li");
+	area.innerHTML = "第"+sequence[i]+"名："+data[i][0]+" 空气质量：<b>"+data[i][1]+"</b>";
+	//  写了innerHTML  之后 还可以appenchild操作
+	ul.appendChild(area);
+	}
+}
+
+function btnHandle() {
+  var aqiData = getData();
+  sortAqiData(aqiData);
+  render(aqiData);
+  var btn = document.getElementById("sort-btn");  //排序之后 禁用按钮，避免多次添加内容。
+  btn.disabled = "disabled";
+}
+
+function init() {
+document.getElementById("sort-btn").onclick = btnHandle;  //绑定事件，直接绑定函数。不能加（）
+  // 在这下面给sort-btn绑定一个点击事件，点击时触发btnHandle函数
+}
+init();
+	
+		
 		</script>
 	</body>
 </html>
