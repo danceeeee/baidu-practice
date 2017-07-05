@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>task three</title>
+		<style type="text/css">
+			* {
+				padding: 0px;
+				margin: 0px;
+			}
+			body {
+				font-size: 15px;
+				line-height: 1.6em;
+			}
+			ul {
+				list-style-type: none;
+			}
+			#container1 {
+				margin: 30px 20px;
+				background: #eee;
+				border: solid #999999 1px;
+				max-height: 500px;
+				padding: 20px;	
+				overflow: auto;
+				
+			}
+			
+			#container1 #right1 {
+				float: right;
+				width: 80px;
+				padding: 20px 20px 0px 20px;
+				border:1px solid #999;	
+			}
+			#container1 #right1 img {
+				margin-bottom: 15px;
+			}
+			#container1 #left1 {
+				float: left;
+				width: 170px;
+				padding: 15px;
+				border:1px solid #999;		
+			}
+			#container1 #left1 span {
+				vertical-align: top;
+				padding-left: 10px;
+			}
+			#container1 #center1 {
+				margin-left: 240px;
+				margin-right:160px;
+				padding: 20px;
+			}
+			#container1 #center1 p {
+				text-indent: 2em;
+			}
+			#container1 .part1 {
+				background: white;
+				margin: 15px;
+				}
+			
+			#container2 {
+				margin: 30px 20px;
+				background: #eee;
+				border: solid #999999 1px;
+				height: 500px;
+				padding: 20px;
+				position: relative;	
+				border:1px solid #999;
+				overflow: auto;
+			}
+			#container2 #left2 {
+				position: absolute;
+				left: 20px;
+				top: 20px;
+				padding: 15px;
+				width: 170px;
+				border:1px solid #999;
+			}
+			#container2 #left span {
+				vertical-align: top;
+				padding-left: 10px;
+			}
+			#container2 #center2 {
+				position: absolute;
+				left: 240px;
+				top: 20px;
+				border:1px solid #999;
+				right: 160px;
+				padding: 20px;
+			}
+			#container2 #center2 p {
+				text-indent: 2em;
+			}
+			#container2 .part2 {
+				background: #FFFFFF;
+			}
+			#container2 #right2 {
+				position: absolute;
+				right: 20px;
+				top: 20px;
+				width: 80px;
+				padding: 15px 20px 0px 20px;
+			}
+			#container2 #right2 img {
+				margin-bottom:15px ;
+			}
+			/** {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+.container {
+    background-color: #eee;
+    border: 1px solid #999;
+    margin: 20px;
+}
+
+.container > div {
+    background-color: #FFF;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.left {
+    width: 200px;
+}
+
+.main {
+    margin: 0 20px;
+    width: calc(100% - 200px - 120px - 40px);
+}
+
+.right {
+    width: 120px;
+}
+
+div {
+    padding: 20px;
+}
+
+span {
+    vertical-align: top;
+}
+
+a img {
+    width: 80px;
+    height: 80px;
+    margin-top: 20px;
+}
+
+a:nth-child(1) img {
+    margin-top: 0px; 
+}
+*/
+		</style>
+	</head>
+	<body>
+		<div id="container1">
+			<div class="part1" id="left1" >
+				<img src="img/logo.png" alt="logo"/><span>草帽海贼团</span>
+			</div>
+			<div class="part1" id="right1">
+				<ul>
+					<li><img src="img/路飞.jpg" alt="路飞"/></li>
+					<li><img src="img/索隆.jpg" alt="索隆"/></li>
+					<li><img src="img/乔巴.jpg" alt="乔巴" /></li>
+					<li><img src="img/乌索普.jpg" alt="乌索普" /></li>
+				</ul>
+			</div>
+			<div class="part1" id="center1">
+				<h3>草帽海贼团</h3>
+				以下是部分成员介绍
+				<br />
+				<div class="intro1">
+					<h4>船长 --路飞</h4>
+					<p>海军英雄卡普的孙子，革命军首领龙的儿子，草帽海贼团团长。ASL三兄弟中的小弟。极恶的世代之一。</p>
+					<p>性格积极乐观，爱憎分明且十分重视伙伴，不甘屈居于他人之下，对任何危险的事物都超感兴趣。和其他传统的海贼所不同的是，他并
+						不会为了追求财富而无故杀戮，而是享受着身为海贼的冒险和自由。从忘年交红发香克斯手里继承了海贼王罗杰的草帽。</p>
+				</div>
+				<div class="intro1">
+					<h4>剑士--索隆</h4>
+					<p>草帽海贼团中的三大战斗力之一，使用三把刀战斗的三刀流剑士，二年前超新星11人之一。极恶劣一代。爱喝酒，爱睡觉，讲义气，方向感差。和山治是
+						死对头。为了小时候与古伊娜的约定而踏上了前往世界第一剑士的道路，随后成为主角蒙奇·D·路飞的第一个伙伴。在初次败给世界第一剑士“鹰眼米霍克”后
+						路飞发誓永不再败，并且更加努力的锻炼自己。在鹰眼的帮助训练下，两年后的他成功与伙伴们汇合，并且为了实现自己的梦想，奔赴强者如云的新世界。</p>
+				</div>
+				<div class="intro1">
+					<h4>船医--乔巴</h4>
+					<p>托尼托尼·乔巴，日本漫画《航海王》及其衍生作品中的角色。乔巴是草帽海贼团的船医，吃了人人果实的驯鹿，可用蓝波球进行八段身体变形。</p>
+					<p>他是草帽海贼团的第五位伙伴，职位是船医。原为磁鼓岛库蕾哈医生最宠爱的驯鹿兼医疗助手[1]  。乔巴的恩人是“庸医”希鲁鲁克，他身为野生驯鹿时本来
+						没有名字，“乔巴”也是由希鲁鲁克给他命名的，意思是他有一对连树木都可以轻松砍倒的角。</p>
+				</div>
+				<div class="intro1">
+					<h4>狙击手--乌索普</h4>
+					<p>乌索普，日本漫画《海贼王》及其衍生作品中的角色。草帽海贼团狙击手，特征为头戴狙击防风镜、浅啡色头巾，长鼻子。小时候是出名的吹牛大王，和村
+						里的几个孩子组成“乌索普海贼团”，自称乌索普船长。发现克洛船长的阴谋后，立志要保护村里的人，和路飞并肩作战。梦想是要成为勇敢的海上战士。</p>
+				</div>
+			</div>
+			
+		</div>
+		
+		<div id="container2">
+			<div class="part2" id="left2" >
+				<img src="img/logo.png" alt="logo"/><span>草帽海贼团</span>
+			</div>
+			<div class="part2" id="center2">
+				<h3>草帽海贼团</h3>
+				以下是部分成员介绍
+				<br />
+				<div class="intro2">
+					<h4>船长 --路飞</h4>
+					<p>海军英雄卡普的孙子，革命军首领龙的儿子，草帽海贼团团长。ASL三兄弟中的小弟。极恶的世代之一。</p>
+					<p>性格积极乐观，爱憎分明且十分重视伙伴，不甘屈居于他人之下，对任何危险的事物都超感兴趣。和其他传统的海贼所不同的是，他并
+						不会为了追求财富而无故杀戮，而是享受着身为海贼的冒险和自由。从忘年交红发香克斯手里继承了海贼王罗杰的草帽。</p>
+				</div>
+				<div class="intro2">
+					<h4>剑士--索隆</h4>
+					<p>草帽海贼团中的三大战斗力之一，使用三把刀战斗的三刀流剑士，二年前超新星11人之一。极恶劣一代。爱喝酒，爱睡觉，讲义气，方向感差。和山治是
+						死对头。为了小时候与古伊娜的约定而踏上了前往世界第一剑士的道路，随后成为主角蒙奇·D·路飞的第一个伙伴。在初次败给世界第一剑士“鹰眼米霍克”后
+						路飞发誓永不再败，并且更加努力的锻炼自己。在鹰眼的帮助训练下，两年后的他成功与伙伴们汇合，并且为了实现自己的梦想，奔赴强者如云的新世界。</p>
+				</div>
+				<div class="intro2">
+					<h4>船医--乔巴</h4>
+					<p>托尼托尼·乔巴，日本漫画《航海王》及其衍生作品中的角色。乔巴是草帽海贼团的船医，吃了人人果实的驯鹿，可用蓝波球进行八段身体变形。</p>
+					<p>他是草帽海贼团的第五位伙伴，职位是船医。原为磁鼓岛库蕾哈医生最宠爱的驯鹿兼医疗助手[1]  。乔巴的恩人是“庸医”希鲁鲁克，他身为野生驯鹿时本来
+						没有名字，“乔巴”也是由希鲁鲁克给他命名的，意思是他有一对连树木都可以轻松砍倒的角。</p>
+				</div>
+				<div class="intro2">
+					<h4>狙击手--乌索普</h4>
+					<p>乌索普，日本漫画《海贼王》及其衍生作品中的角色。草帽海贼团狙击手，特征为头戴狙击防风镜、浅啡色头巾，长鼻子。小时候是出名的吹牛大王，和村
+						里的几个孩子组成“乌索普海贼团”，自称乌索普船长。发现克洛船长的阴谋后，立志要保护村里的人，和路飞并肩作战。梦想是要成为勇敢的海上战士。</p>
+				</div>
+			</div>
+			<div class="part2" id="right2">
+				<ul>
+					<li><img src="img/路飞.jpg" alt="路飞"/></li>
+					<li><img src="img/索隆.jpg" alt="索隆"/></li>
+					<li><img src="img/乔巴.jpg" alt="乔巴" /></li>
+					<li><img src="img/乌索普.jpg" alt="乌索普" /></li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>
