@@ -1,0 +1,9 @@
+.focus {
+	border-color: dodgerblue;
+}
+.right {
+	border-color: greenyellow;
+}
+.wrong {
+	border-color: #FF0000;
+}

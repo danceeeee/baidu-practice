@@ -1,0 +1,239 @@
+
+.banner .banner-pic {
+	width: 641px;
+	height: 301px;
+	float: left;
+}
+.banner .banner-inf {
+	float: right;
+	width: 203px;
+	border-top: 2px solid #CC8091;
+}
+.banner-inf .title {
+	display:inline-block;
+	margin: 7px;
+	font-size:24px;
+	color:#000;
+	border-bottom:solid  1px #938e8c;
+}
+.banner-inf .title:first-letter {
+	font-size:1.5em ;
+}
+.banner .p1 {
+	font-family: "楷体";
+	color: #676767;
+	line-height: 10px;
+	margin-bottom: 20px;
+}
+.banner .p2 {
+	font-size: 116px;
+	color: #75b86b;
+	font-style: italic;
+}
+.banner .p3 .d1 {
+	float: left;
+	font-size: 55px;
+	color: #cc8091;
+}
+.banner .p3 .d2 {
+	float: left;
+	margin-top:18px ;
+}
+.banner .p3 .d2 h2 {
+	font-size: 21px;
+	color:#CC8091;
+}
+.intro {
+	width:671px ;
+}
+.intro .intro-content {
+	float: left;
+	height: 162px;
+	margin-right: 30px;
+	overflow: hidden;
+	color: #231815;
+	transparent:0.7;
+	line-height: 16px;
+	opacity: 0.7;
+}
+.intro .intro-content h2 {
+	display: inline-block;
+	border-bottom: 1px solid;
+	font-size: 16px;
+	
+}
+.intro .what {
+	width:228px;
+}
+.what h2 {
+	color:#418c59
+}
+.intro .when {
+	width: 204px;
+}
+.when h2 {
+	color:#d2994f ;
+}
+.intro .how {
+	position: relative;
+	width: 149px;
+}
+.how h2 {
+	color:#cc7680;
+}
+.how .proportion {
+	position: absolute;
+	bottom: 0;
+}
+.intro .how .proportion .line{
+	display: inline-block;
+	border-top: dashed 1px;
+	width: 44px;
+}
+.intro .how .proportion .num {
+	color:#cd4a48;
+	
+}
+.pannel .pannel-left {
+	float: left;
+	width: 415px;
+	margin-right: 18px;
+	margin-top: 70px;
+}
+.pannel .pannel-left .pannel-left-header {
+	font-weight: bold;
+	color: #11456b;
+	border-bottom: 2px solid;
+	margin-bottom: 25px;
+}
+.pannel .pannel-left .pannel-left-header .p1 {
+	font-size:42px;
+	font-family: "黑体";
+}
+.pannel .pannel-left .pannel-left-header .fword {
+	font-size: 72px;
+	color:#f5e327;
+	font-style: italic;
+}
+.pannel .pannel-left .pannel-left-header .p2 {
+	font-size: 33px;
+	margin-bottom:16px;	
+}
+.pannel .pannel-left-content .p2 {
+	text-indent: 2em;
+	line-height: 16px;
+	color: #767777;
+}
+.pannerl .pannel-left-content .img{
+	display: inline-block;
+	float: right;
+	margin-top:100px ;
+	padding: 20px;
+}
+.pannel .pannel-left-content .p1 {
+	line-height: 16px;
+	color: #767777;
+}
+.pannel .pannel-left-content .p1 span {
+	display: inline-block;
+	font-size: 70px;
+	color: #F5E327;
+	float: left;
+}
+.pannel .pannel-right {
+	float: right;
+	width: 459px;
+	margin-top: 70px;
+}
+.pannel .pannel-right-logo {
+	position: relative;
+}
+.pannel .pannel-right .pannel-right-logo-txt {
+	position: absolute;
+	height: 44px;
+	bottom: 8px;
+	left: 38px;
+	border-left: solid 3px;
+	color: #72b16a;
+}
+.pannel .pannel-right .pannel-right-logo-txt div {
+	position: absolute;
+	width: 450px;
+	bottom: 9px;
+	font-style: italic;
+}
+.pannel .pannel-right .pannel-right-logo-txt div span {
+	font-size: 26px;
+	color: #fff;
+	font-style:normal;
+	margin:0 10px 0 13px;
+}.pannel .pannel-right .pannel-right-content {
+	margin-top:30px ;
+	background: #eeedd6;
+}
+.pannel .pannel-right .pannel-right-content .pannel-right-content-list {
+	padding: 30px;
+	list-style: none;
+}
+.pannel .pannel-right .pannel-right-content .pannel-right-content-list li {
+
+	color: #5a5b5b;
+	font-family: "宋体";
+	margin-bottom: 20px;
+	font-size: 16px;
+	padding-left:17px;
+	background: url(../img/三角.png) no-repeat 0 50%;
+}
+.pannel .pannel-right .pannel-right-content .pannel-right-content-list div {
+	float: left;
+}
+.pannel .pannel-right .pannel-right-content .pannel-right-content-list .line-right {
+	float: right;
+}
+.pannel .pannel-right .pannel-right-content .pannel-right-content-list .line {
+	width: 170px;
+	margin-left:20px;
+	height: 10px;
+	border-bottom: dotted 2px ;
+}
+.pannel .pannel-right .pannel-right-content-intro {
+	overflow: hidden;
+}
+.pannel .pannel-right .pannel-right-content-intro .left {
+	float: left;
+	box-sizing: border-box;
+	width: 260px;
+	height: 160px;
+	padding: 40px 10px 35px 10px;
+	background:#D45D5C ;
+	color: #fff;
+}
+.pannel .pannel-right .pannel-right-content-intro .left .logo {
+	float: left;
+	font-size: 110px;
+	border-right: 2px solid;
+	margin-right: 10px;
+}
+.pannel .pannel-right .pannel-right-content-intro .left .p1 {
+	font-size: 21px;
+	font-style: italic;
+	font-family: "黑体";
+	line-height: 24px ;
+	margin-bottom: 10px;	
+}
+.pannel .pannel-right .pannel-right-content-intro .left p {
+	font-family: "黑体";
+}
+.pannel .pannel-right .pannel-right-content-intro .right {
+	box-sizing: border-box;
+	font-size: 14px;
+	font-family: "黑体";
+	font-style: italic;
+	float: right;
+	width: 198px;
+	height:160px ;
+	padding: 18px 10px 0px 17px;
+}
+.pannel .pannel-right .pannel-right-content-intro .right .top {
+	float: right;
+}
