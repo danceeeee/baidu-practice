@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0px;
+				padding: 0px;
+			}
+			.part{
+				font-size: 16px;
+				line-height: 2em;
+				margin: 20px auto;
+				
+			}
+			.part input{
+				padding: 0.5em;
+				margin-left: 20px;
+				border-radius: 6px;
+				border: 1px solid #CCCCCC;
+			}
+			.part input.error {
+				border-color: #FF0000;
+			}.part input.right {
+				border-color: #008000;
+			}
+			.part #btn {
+				background: dodgerblue;
+				color: white;
+				border-color: dodgerblue;
+				border-radius: 3px;
+			}
+			.part .inf {
+				font-weight: bolder;
+				display: inline-block;
+				width: 40%;
+				text-align: right;
+			}
+			.tip {
+				font-size: 0.8em;
+			}
+			.part span {
+				color: #999;
+				margin-left: calc(29px + 40%);
+			}
+		</style>
+	</head>
+	<body>
+		<form>
+		<div class="part">
+			<label class="inf" for="name">名称</label> <input type="text" name="name" id="name" value="输入" /><input type="button" value="验证" id="btn"/>
+			<br />
+			<span class="tip">必填，长度为4~16个字符</span>
+		</div>
+		</form>
+	</body>
+	<script type="text/javascript">
+		//获取节点
+	
+		var btn = document.getElementById("btn");
+		var tip = document.getElementsByClassName("tip")[0];
+		var inpt = document.getElementById("name");
+		function initial(){
+			
+			//绑定验证事件
+			btn.addEventListener("click",function(){
+				
+				verifyName(inpt);
+			},false);
+			inpt.addEventListener("focus",function(){
+				var inp = document.getElementById("name");
+				renew(inp);
+			},false);
+		}
+		function verify(nod){
+				var txt =nod.value;
+				var num = 0; 
+				//验证中文正则表达式
+				var reg1 = /[\u4E00-\u9FA5\uF900-\uFA2D]/;
+				var reg2 = /[\x00-\xff]/;
+				
+ 				for(var i=0,len = txt.length;i<len;i++){
+ 					var val = txt[i];
+					if(reg1.test(val)){
+						num = num + 2;
+					}else if(reg2.test(val)){
+						num++;
+					}else{
+						alert("不合法的字符输入");
+					}
+				};
+ 			
+ 				if(num > 4 && num < 16){
+ 					return true;
+ 				}else{
+ 					return false;
+ 				}
+				
+			}
+		function verifyName(nod){
+			var flag = verify(nod);
+			
+			if(flag){
+				nod.className = "right";
+				tip.innerHTML = "名称格式正确";
+				tip.style.color = "#008000";
+			}else{
+				nod.className = "error";
+				tip.innerHTML = "格式错误";
+				tip.style.color = "#FF0000";
+			}
+		}
+		function renew(nod){
+			nod.className = "";
+			tip.innerHTML ="必填，长度为4~16个字符";
+			tip.style.color = "#ccc"
+			
+		}
+		window.addEventListener("load",initial,false);
+	</script>
+</html>

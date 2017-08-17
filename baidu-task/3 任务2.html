@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			form {
+				margin: 20px auto;
+				width: 600px;
+			}
+			.content {
+				margin-bottom:30px;
+				
+			}
+			.item {
+				float: left;
+				width: 100px;
+			}
+			.item label {
+				float: right;
+				margin-top: 0.4em;
+			}
+			.content input {
+				box-sizing: border-box;
+				margin-left: 18px;
+				width: 480px;
+				border: 1px #ccc solid;
+				border-radius: 4px;
+				padding: 0.5em;
+			}
+			.btn input {
+				float: right;
+				background: #00BFFF;
+				padding: 10px 20px;
+				border-radius: 5px;
+				color: #fff;
+			}
+			.clearfloat:after {
+				content: "";
+				display: table;
+				clear: both;
+			}
+			
+		</style>
+		<script type="text/javascript" src="js/3 任务2.js"></script>
+		
+	</head>
+	<body>
+		<form action="x" name="a">
+			<div class="name content">
+				<div><span class="item"><label for="">名称</label></span><input type="text" name="name"/></div>
+				<div class="tip"></div>
+			</div>
+			<div class="password content">
+				<div><span class="item"><label for="">密码</label></span><input type="password" name="password"/></div>
+				<div class="tip"></div>
+			</div>
+			<div class="repassword content">
+				<div><span class="item"><label for="">密码确认</label></span><input type="password" name="rpassword"/></div>
+				<div class="tip"></div>
+			</div>
+			<div class="mail content">
+				<div><span class="item"><label for="">邮箱</label></span><input type="text" name="email"/></div>
+				<div class="tip"></div>
+			</div>
+			<div class="phonecall content">
+				<div><span class="item"><label for="">手机</label></span><input type="text" name="phonecall"/></div>
+				<div class="tip"></div>
+			</div>
+			<div class="btn"><input type="button" value="提交"/></div>
+		</form>
+		
+	</body>
+
+</html>
