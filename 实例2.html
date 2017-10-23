@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>实例</title>
+	<style>
+			body {
+				background: #9a99ff;
+			}
+			body,div,ul,p,h2,span,img,li,h3{
+				margin: 0px;
+				padding: 0px;;
+			}
+			button {
+				cursor: pointer;
+			}
+			ul {
+				list-style-type: none;
+			}
+			#a1 {
+				width: 70px;
+				margin: 10px auto;
+			}
+			#a1 .opt {
+				position: absolute;
+				list-style-type: none;
+				margin-top:5px;
+				border:1px solid #9a99ff;
+				background: white;
+				display: none;
+			}
+			#a1 .opt li {
+				display: inline-block;
+				line-height: 24px;
+				font-size: 12px;
+				width: 100%;
+				vertical-align: center;
+			}
+			#a1 .opt li:hover {
+				cursor: pointer;
+				background: grey;
+			}
+			#close {
+				border-top: 1px dodgerblue solid;
+			}
+			#a2 {
+				margin: 5px auto;
+				width: 200px;
+			}
+			#a2 p {
+				border: solid goldenrod 2px;
+				padding: 5px 20px;
+				overflow: auto;
+				cursor: pointer;
+				text-indent: 2em;
+			}
+			#a3 {
+				width: 200px;
+				margin:10px auto;
+			}
+			#tip {
+				color: lightgray;
+				font-size: 0.8em;
+				padding-left:3px ;
+			}
+			#result {
+				color: red;
+				font-size: 3em;
+			}
+			
+			#a4  {
+				width: 50px;
+				margin: 0 auto;
+			}
+			#over {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				display: none;
+				background:rgba(0,0,0,0.5);
+			}
+			#popcontent {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				width: 500px;
+				height:300px;
+				background: white;
+				border: 2px solid orange;
+				display: none;
+				margin:-151px 0px 0px -251px;
+			}
+			#popcontent p {
+				background: black;
+				border-bottom: 2px solid orange;
+			}
+			
+			#a5 {
+				width: 400px;
+				margin: 0 auto;
+			}
+			#changestyle {
+				width: 200px;
+				height: 200px;
+				padding: 10px;
+				line-height: 1.5em;
+				background:white;
+
+			}
+			#a6 {
+				width: 424px;
+				height:286px;
+				margin:0 auto;
+				background: white;
+				padding: 0 0 10px 10px;
+			}
+			#a6 ul li {
+				display: inline;
+				float: left;
+				margin-right: 10px;
+				margin-top: 10px;
+				border: solid 1px gainsboro;
+			}
+			#a7 {
+				width: 400px;
+				height: 300px;
+				margin: 0 auto;
+			}
+			#a7 .title {
+				overflow: hidden;
+				background: black;
+				
+			}
+			#a7 .title li{
+				cursor: pointer;
+				float: left;
+				padding:10px 10px;
+				border-right: 1px white solid;
+				
+				color: white;			
+				}
+			#a7 div {
+				display: none;
+			}
+			#a7 div ul {
+				list-style-position: inside;
+				list-style-type:amharic-abegede;
+				}
+			#a7 .titlecurrent {
+				background: gray;
+			}
+			#a7 .classcurrent {
+				list-style-position: inside;
+				display: block;
+				background: white;
+				padding: 5px 20px;	
+			}
+			#a8 {
+				width: 190px;
+				background: lightgrey;
+				margin: 10px auto;
+				padding-bottom: 10px;
+				
+			}
+			#a8 #calender {
+				overflow: hidden;
+				width: 100%;
+				
+				padding:0 0 10px 10px;
+				
+				
+			}
+			#a8 #calender li {
+				width: 50px;
+				height: 40px;
+				float: left;
+				background: #003;
+				margin-top: 10px;
+				margin-right: 10px;
+				color: white;
+				vertical-align: center;
+				text-align: center;
+				padding: 5px 0;
+				font-weight: ;
+				cursor: pointer;
+			}
+			#a8 #calender li.monthcurrent {
+				background: white;
+				color: red;
+			}
+			#a8 #calender li:hover {
+				background: white;
+				color: red;
+			}
+			#a8 #calender li span {
+				font-size: larger;
+				font-weight: 900;
+			}
+			#a8 div {
+				margin: 0px 10px;
+				border: 1px solid white;
+				padding: 10px;
+				background: #888;
+				color: white;
+				display:none ;
+			}
+			#a8 div.tipcurrent {
+				display: block;
+			}
+			#a9 {
+				border: solid lightgrey 1px;
+				margin: 10px auto;
+				color: #555555;
+				width: 200px;
+				line-height: 1.7em;
+			}
+			#a9 h3 {
+				margin: auto;
+				padding: 5px;
+				width: 188px;
+				background: #808080;
+				border: 1px solid white;
+				cursor: pointer;
+				
+			}
+			#a9 ul {
+				padding-left: 5px;
+				background: #CCCCCC;
+				font-size: 0.8em;
+				display: block;
+			}
+			#a10 {
+				border: 1px solid black;
+				width:326px;
+				margin: 10px auto;
+				padding:0 0 15px 25px;
+				text-align: center;
+				overflow:hidden ;
+			}
+			#a10 div {
+				background: gray;
+				position: relative;
+				float: left;
+				width: 128px;
+				height: 108px;padding: 10px 0px;
+				border: 1px white solid;
+				margin: 10px 10px 0 0;
+				z-index: 1;
+			}
+			#a10 div strong {
+				vertical-align: middle;
+			}
+			#a10 div img {
+				position: absolute;
+				z-index: 0;
+				display:none;
+				top: 0;
+				left: 0;
+			}
+			#a11 {
+				width: 219px;			
+				padding: 10px 7px 10px 10px;
+				background: white;
+				margin: 0px auto;
+				overflow: hidden;
+				border-radius: 5px;
+				}
+				#a11 #showpic {
+					margin: 0px 3px 3px 0px;
+					float: left;
+					border-radius: 5px;
+				}
+				#a11 ul li img {
+					
+					float: left;
+					margin: 0px 3px 3px 0px;
+					border-radius: 3px;
+					
+				}
+	</style>
+</head>
+<body>
+	<div id="a1">
+		<h2>one</h2>
+		<button id="textmethod">输入法</button>
+		<ul class="opt">
+			<li>手写</li>
+			<li>拼音</li>
+			<li id="close">关闭</li>
+		</ul>
+	</div>
+	<br /><br />
+	<div id="a2">
+		<h2>two</h2>		
+		<p class="content">此处有内容<strong>ssss</strong>内容dddddd</p>
+		<p class="content">内容内容</p>
+	</div>
+	<div id="a3">
+			<h2>three</h2>
+		<input type="text"  id="numsum" value="1,2,3" />
+		<label id="tip" for="numsum">输入数字求和，数字之间用半角","号分隔</label>
+		<br />
+		<input type="button" id="sum" value="求和" />
+		<div id="result">
+		</div>
+	</div>
+	<div id="a4">
+			<h2>four</h2>
+		<button id ="pop">弹出</button>
+	</div>
+	<div id="over"></div>
+	<div id="popcontent">
+		<p><span>*</span></p>
+	</div>
+	<br />
+	<div id="a5">
+			<h2>five</h2>
+		属性名：<input type="text" value="color"/>
+		<br />
+		属性值：<input type="text" value="red"/>
+		<br />
+		<button>确定</button>
+		<button>重置</button>
+		<div id="changestyle">
+			在上框中输入属性名和属性值，点击确定改变查看效果。
+		</div>
+	</div>
+	<div id="a7">
+		<h2>six</h2>
+		<ul class="title">
+			<li class="titlecurrent">第一课</li>
+			<li>第二课</li>
+			<li>第三课</li>
+		</ul>
+		<div >
+			<ul>
+				<li>a</li>
+				<li>b</li>
+				<li>c</li>
+				<li>d</li>
+				<li>e</li>
+				<li>f</li>
+				<li>g</li>
+			</ul>
+		</div >
+		<div class="classcurrent" >
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+			</ul>
+		</div>
+		<div>
+			<ul>
+				<li>一</li>
+				<li>二</li>
+				<li>三</li>
+				<li>四</li>
+			</ul>
+		</div>
+		
+	</div>
+	<div id="a8">
+		<h2>seven</h2>
+		<ul id="calender">
+			<li><span>1</span><br />JAN</li>
+			<li><span>2</span><br />FEB</li>
+			<li><span>3</span><br />MAR</li>
+			<li><span>4</span><br />APR</li>
+			<li><span>5</span><br />MAY</li>
+			<li class="monthcurrent"><span>6</span><br />JUN</li>
+			<li><span>7</span><br />JUL</li>
+			<li><span>8</span><br />AUG</li>
+			<li><span>9</span><br />SEP</li>
+			<li><span>10</span><br />OCT</li>
+			<li><span>11</span><br />NOV</li>
+			<li><span>12</span><br />DEC</li>
+		</ul>
+		<div>
+			一月tips
+		</div>
+		<div>
+			二月tips
+		</div>
+		<div>
+			三月tips
+		</div>
+		<div>
+			四月tips
+		</div>
+		<div>
+			五月tips
+		</div>
+		<div class="tipcurrent">
+			六月tips
+		</div>
+		<div>
+			七月tips
+		</div>
+		<div>
+			八月tips
+		</div>
+		<div>
+			九月tips
+		</div>
+		<div>
+			十月tips
+		</div>
+		<div>
+			十一月tips
+		</div>
+		<div>
+			十二月tips
+		</div>
+	
+	</div>
+	<h3>实例9</h3>
+	<div id="a9">
+		<h3>播放列表...</h3>
+		<ul id="songlist">
+			<li>自导自演 -周杰伦</li>
+			<li>猜不透 -丁当</li>
+			<li>流年 -王菲</li>
+			<li>富士山下 -程奕迅</li>
+			<li>表走边看 -李荣浩</li>
+		</ul>
+	</div>
+
+	
+	<script>
+		window.onload = function(){
+			//a1
+			var cls = document.getElementById("close");
+			var but = document.getElementById("textmethod");
+			var cl = but.nextElementSibling;
+				console.log(cl)
+			but.onclick = function(){
+				
+			cl.style.display = cl.style.display === "block"?"none":"block";
+			}//模仿 两次点击的效果。。使用三目运算符 简化代码。
+			cls.onclick = function(){
+				cl.style.display = "none"
+			}
+			//a2
+			var content = document.getElementById("a2").getElementsByTagName("p");
+			for (var i =0;i<content.length;i++){
+				content[i].onclick = function(){
+					alert(this.innerHTML)
+				}
+			}
+
+			//a3
+			var result = document.getElementById("result");
+			var sum = document.getElementById("numsum");
+			sum.onkeypress = function(e){
+				if(!((typeof e.charCode === "number" && e.charCode>=48 && e.charCode<=57) || e.charCode ==44)){
+					e.preventDefault();
+			     }
+			}
+			document.getElementById("sum").onclick = function(){
+				var sumlist = sum.value.split(",");
+				for(var i =0,total=0;i<sumlist.length;i++){//对于数组 直接 for （x in sumlist） 实现遍历
+					total += Number(sumlist[i]);
+				}
+				result.innerHTML = total;
+			}
+			//a4
+			var but = document.getElementById("pop");
+			var popcontent = document.getElementById("popcontent");
+			var over = document.getElementById("over");
+			but.onclick = function(){
+				popcontent.style.display = "block";
+				over.style.display="block";
+			}
+			popcontent.onclick = function(){
+				popcontent.style.display = "none";
+				over.style.display = "none";
+			}
+			//a5
+			var changefun = function(ele,fea,val){
+				ele.style[fea]=val;
+			}
+			var a5 = document.getElementById("a5");
+			var changestyle = document.getElementById("changestyle")
+			var stylevalue = a5.getElementsByTagName("input");
+			var btna5 = document.getElementById("a5").getElementsByTagName("button");
+			btna5[0].onclick=function(){
+				changefun(changestyle,stylevalue[0].value,stylevalue[1].value);
+			}
+			btna5[1].onclick = function(){
+				changestyle.removeAttribute("style")
+			}
+			//a7
+			var tit = document.getElementById("a7").getElementsByTagName("ul")[0];
+			var titlist = tit.getElementsByTagName("li");
+			var conlist = document.getElementById("a7").getElementsByTagName("div");
+			for (var i=0;i<titlist.length;i++){
+				titlist[i].index = i;
+				titlist[i].onmouseover = function(){
+					for (var n=0;n<titlist.length;n++){
+						titlist[n].className = "";
+					}
+					this.className = "titlecurrent";
+					for (var m=0;m<conlist.length;m++){
+						conlist[m].className="";
+					}
+					conlist[this.index].className = "classcurrent";
+				}
+			}
+			//a8
+			var mons = document.getElementById("calender").getElementsByTagName("li");
+			var montips =document.getElementById("a8").getElementsByTagName("div");
+			var oArray = [
+		"元旦：1月1日至3日放假三天。",
+		"春节：2月2日至8日放假7天。",
+		"妇女节：3月8日妇女节，与我无关。",
+		"清明节：4月3日至5日放假3天",
+		"劳动节：4月30日至5月2日放假3天。",
+		"端午节：6月4日至6日放假3天。",
+		"小暑：7月7日小暑。不放假。",
+		"七夕节：8月6日七夕节。不放假。",
+		"中秋节：9月10日至12日放假3天。",
+		"国庆节：10月1日至7日放假7天。",
+		"立冬：11月8日立冬。不放假。",
+		"艾滋病日:12月1日<br />废除奴隶制国际日:12月2日。"];
+
+			for (var i =0;i<mons.length;i++){
+				mons[i].index = i;
+				mons[i].onmouseover = function(){
+					for (var n =0;n<mons.length;n++){
+						mons[n].className = "";
+					}
+					this.className = "monthcurrent";
+					for (var m =0;m<montips.length;m++){
+						montips[m].className = "";
+					}
+					montips[this.index].className = "tipcurrent";
+					montips[this.index].innerHTML = oArray[this.index];
+				}
+			}
+			//a9
+			var songlist = document.getElementById("songlist");
+			var songtitle = document.getElementById("a9").getElementsByTagName("h3")[0];
+			songtitle.onclick = function(){
+				var dis = songlist.style;//不能将变量设置为songlist.style.display;
+				 dis.display =  dis.display == "none"?"block":"none";
+			}
+		}
+	</script>
+</body>
+</html>

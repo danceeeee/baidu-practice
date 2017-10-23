@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.grind {
+				width: 100%;
+				max-width: 1200px;
+				background: #FFFFFF;
+			}
+			.grind *{
+				box-sizing: border-box;
+			}
+			.row:before,.row:after {
+				content: "";
+				display: table;
+				clear: both;
+			}
+			[class*="col"] {
+				float: left;
+				min-height: 1px;
+				width: 16.8%;
+				padding: 6px;
+				background: #ffdcdc;
+			}
+			.col-1 {
+				width: 16.6%;
+			}
+			.col-2 {
+				width: 33.2%;
+			}
+			.col-3 {
+				width: 50%;
+			}
+			.outline * {
+				outline: dotted 1px #11aaaa;
+			}
+			/*响应式布局  通过媒体审查来实现   @media all（screen或者print） and （设置屏幕宽度）*/
+			@media all and (max-width:800px) {
+				.col-1 {width: 33.3%;}
+				.col-2 {width: 50%;}
+				.col-3 {width: 100%;}
+				
+				.row .col-2:last-of-type {
+					width: 100%;
+				}
+				.row .col-5 ~ .col-1{
+            width: 100%; 
+        }
+			}
+		</style>
+	</head>
+	<body>
+	<div class="grind outline">
+		<div class="row">
+			<div class="col-1">1</div>
+			<div class="col-2">2</div>
+			<div class="col-3">3</div>
+		</div>
+		<div class="row">
+			<div class="col-3">3</div>
+			<div class="col-3">3</div>
+		</div>
+		<div class="row">
+			<div class="col-2">2</div>
+			<div class="col-2">2</div>
+			<div class="col-2">2</div>
+		</div>
+	</div>
+	</body>
+	
+</html>

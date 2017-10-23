@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body {margin: 0px;
+				background: pink;
+			}
+			#test {
+				width: 200px;
+				background-color: black;
+				height: 200px;
+				margin: 0px auto;
+				
+			}
+			.contain {
+				text-align: center;
+			}
+			.nav {
+				width: 400px;
+				margin: 0px;
+				overflow: hidden;
+				
+				}
+			.nav ul {
+				list-style-type: none;
+			} 
+			.skin {
+				margin:10px 0;
+			}
+			#skin li{
+				float: left;
+				width: 6px;
+				height: 6px;
+				text-indent: -999px;
+				border-width:6px;
+				border-style: solid;通过边框实现镂空效果
+				overflow: hidden;
+				margin: 0px 10px;
+				cursor: pointer;
+			}
+			#pink {
+				color:pink;
+				background: pink;
+			}
+			#lightgreen {
+				color: lightgreen;
+				background: lightgreen;
+			}
+			#red {
+				color: red;
+				background: red;
+			}
+			#skin .current {
+				background: #FFFFFF;   将背景设为白色.边框颜色不变.
+			}
+				
+			#menu li  a{
+				
+				float:left ;
+				padding: 3px 10px;
+				width: 50px;
+				text-align: center;
+				border: solid white 1px;
+			}
+			#menu li a {
+				color: white;
+				text-decoration: none;
+			}
+			#menu li a:hover {
+				background: #ff4477;
+			}
+			#menu {
+				background: red;
+			}
+			form {
+				text-align: center;
+			}
+			
+	
+			#notiontext {
+				display:none ;
+				position:absolute;
+				width: 150px;
+				background: mistyrose;
+				border:solid 1px white;
+			
+			}	
+			
+				
+		</style>
+	</head>
+	
+	<body>
+		<div id="t">
+			dddd
+		</div>
+		<div class="nav">
+			<ul id="skin">
+				<li id="pink" class="current" title="pink">红</li>
+				<li id="red" title="red">绿</li>
+				<li id="lightgreen"  title="lightgreen">黑</li>
+			</ul>
+			<br />
+			<ul id="menu">
+				<li><a href="#">新闻</a></li>
+				<li><a href="#">娱乐</a></li>
+				<li><a href="#">体育</a></li>
+				<li><a href="#">电影</a></li>
+				<li><a href="#">音乐</a></li>
+			</ul>
+		</div>
+		<br />
+		<div class="contain">
+		<button id="changewidth">变宽</button>
+		<button id="changeheight">变高</button>
+		<button id="changecolor">变色</button>
+		<button id="hidden">隐藏</button>
+		<button id="reset">重置</button>
+		</div>
+		<div id="test">	
+		</div>
+		<form>
+			<label for="city">城市：</label>
+			<input type="text" name="city" id="city" value="北京" />
+			<br />
+			<label for="part">区域：</label>
+			<input type="text" name="part" id="part" value="西单" />
+			<br />
+			<button id="sub">传参</button>
+			</form>
+			<div id="notion">
+			<input type="checkbox" id="login"/>
+			<label for="login">自动登录</label>
+			<div id="notiontext">
+				为了你的信息安全，请不要在陌生环境选择
+			</div>
+			</div>
+		
+	</body>
+	<script type="text/javascript">
+		var show = document.getElementById("notion");
+		var tip = document.getElementById("notiontext");
+		show.onmouseover = function (e){
+			tip.style["display"]="block";
+			tip.style.top = e.pageY+20+"px";
+			tip.style.left = e.pageX+10+"px";
+		
+		}
+		show.onmouseout = function(){
+			tip.style.display = "none";
+			
+		}
+		var sub = document.getElementById("sub");
+		var variable = document.getElementsByTagName("input");
+		sub.onclick = function(){
+			var str ="";
+			for (var i=0;i<variable.length;i++){
+			str += variable[i].value;
+			str += "\n"
+		}
+			alert(str);
+		}
+		var skin = document.getElementById("skin");
+		var menus =document.getElementById("menu").getElementsByTagName("li");
+		var childs = skin.getElementsByTagName("li");//或者用childlist属性
+		for (var i=0;i<childs.length;i++){
+			var ind = i;
+			childs[ind].onclick = function(){
+				for (var p in childs){
+					childs[p].className = "";
+				}
+				var color = this.id;
+				
+				this.className = "current";
+				console.log(document.body,color)
+				document.body.style["background"] = color
+			}
+		}
+		var box = document.getElementById("test");
+		var width = document.getElementById("changewidth");
+		width.addEventListener("click",function(){
+			box.style["width"] = "400px";//使用中括号来调用属性
+		})
+		var height = document.getElementById("changeheight");
+		height.addEventListener("click",function(){
+			box.style.height = "400px";
+		})
+		var color = document.getElementById("changecolor");
+		color.addEventListener("click",function(){
+			box.style.backgroundColor = "red";
+		})
+		var hide = document.getElementById("hidden");
+		hide.addEventListener("click",function(){
+			box.style.display = "none";
+		})
+		var re = document.getElementById("reset");
+		re.addEventListener("click",function(){
+			window.location.reload()
+		})
+		
+	</script>
+</html>
